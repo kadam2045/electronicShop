@@ -12,6 +12,8 @@ import {
 
 import Rating from "../components/Rating";
 import { useGetProductDetailsQuery } from "../slices/productsSlice";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 const ProductScreen = () => {
   const { id } = useParams();
@@ -26,9 +28,9 @@ const ProductScreen = () => {
       </Link>
 
       {isLoading ? (
-        <h3>Loading....</h3>
+        <Loader />
       ) : error ? (
-        <div>{error?.data}</div>
+        <Message variant="danger">{error?.data}</Message>
       ) : (
         <>
           <Row>

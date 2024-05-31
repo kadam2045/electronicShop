@@ -33,3 +33,19 @@ code {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* loader */
+/* Loader.css */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+
+}
+
+.custom-spinner {
+  width: 3rem;
+  height: 3rem;
+  color: #007bff; /* Primary color */
+}
