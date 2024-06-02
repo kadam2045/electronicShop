@@ -21,7 +21,7 @@ const cartSlice = createSlice({
             }
 
             //calculate item price
-            state.itemPrice = decimalHelper(state.cartItems.reducer((acc, item) => acc + item.price * item.qty, 0))
+            state.itemPrice = decimalHelper(state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0))
 
             //shipping price  
             //  if order price is greater than 100 then no shipping price else 10
