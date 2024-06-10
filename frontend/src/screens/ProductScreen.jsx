@@ -28,10 +28,11 @@ const ProductScreen = () => {
   const navigate = useNavigate();
 
   const addToCartHandler = () => {
+    const quantity = Number(qty);
     dispatch(
       addToCart({
         ...products,
-        qty,
+        qty: quantity,
       })
     );
 
